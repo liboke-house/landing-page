@@ -230,22 +230,41 @@
   .js .reveal.in{opacity:1; transform:none;}
 
   /* About */
-  .about-grid{
+  .about-layout{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:0.85fr 1.15fr;
     gap:56px;
     align-items:start;
   }
-  .about-grid .card{
+  .about-photo img{
+    width:100%;
+    aspect-ratio:5/8;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 30px 60px -25px rgba(26,23,19,0.35);
+  }
+  .about-photo figcaption{
+    margin-top:12px;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    opacity:0.75;
+  }
+  .about-photo figcaption a{text-decoration:underline; text-underline-offset:2px;}
+  .about-cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .about-cards .card{
     background:var(--cream-dim);
     border-radius:18px;
     padding:34px 32px;
     border:1px solid var(--line);
   }
-  .about-grid h3{font-size:1.2rem; margin-bottom:12px;}
-  .about-grid p{color:var(--ink-soft); font-size:0.97rem;}
+  .about-cards h3{font-size:1.2rem; margin-bottom:12px;}
+  .about-cards p{color:var(--ink-soft); font-size:0.97rem;}
   @media (max-width:760px){
-    .about-grid{grid-template-columns:1fr; gap:24px;}
+    .about-layout{grid-template-columns:1fr; gap:24px;}
   }
 
   /* Packaging */
@@ -429,14 +448,20 @@
         <h2>What's a liboké?</h2>
         <p>In Congolese cooking, a liboké is food gently steamed inside a banana leaf — sealed in, flavour intensified, nothing wasted. It's how we think about delivery too.</p>
       </div>
-      <div class="about-grid">
-        <div class="card reveal">
-          <h3>Authenticity, reinvented</h3>
-          <p>We take beloved Congolese recipes and refine them for the table — familiar flavours, elevated presentation. This is home cooking treated like fine dining.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Delivery only, for now</h3>
-          <p>No venue yet — just baby steps. We're starting small: a tight menu, made in small batches, delivered across Nairobi in limited monthly drops.</p>
+      <div class="about-layout">
+        <figure class="about-photo reveal">
+          <img src="assets/liboke-de-poisson.jpg" alt="Liboké de poisson — fish and tomato stew steamed inside a banana leaf, served with fried plantain, a traditional Congolese dish">
+          <figcaption>A traditional liboké de poisson, steamed in banana leaf — photo: <a href="https://commons.wikimedia.org/wiki/File:Mabok%C3%A9_de_capitaine_avec_les_bananes_frites.jpg" target="_blank" rel="noopener">Lucia236</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <div class="about-cards">
+          <div class="card reveal">
+            <h3>Authenticity, reinvented</h3>
+            <p>We take beloved Congolese recipes and refine them for the table — familiar flavours, elevated presentation. This is home cooking treated like fine dining.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Delivery only, for now</h3>
+            <p>No venue yet — just baby steps. We're starting small: a tight menu, made in small batches, delivered across Nairobi in limited monthly drops.</p>
+          </div>
         </div>
       </div>
     </div>
